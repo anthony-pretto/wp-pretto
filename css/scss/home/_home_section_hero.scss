@@ -1,0 +1,39 @@
+.home-hero {
+  display: block;
+  position: relative;
+  padding-top: $base-spacing*4;
+  padding-bottom: $base-spacing*4;
+
+  @media screen and (min-width: $mq-medium) {
+    height: 460px;
+    padding-top: $base-spacing*5;
+
+    background-image: url(../img/home-hero.png);
+    background-size: 1920px auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: $mq-tablet) {
+    height: 500px;
+  }
+}
+
+.home-hero-heading {
+  margin: auto;
+  width: 100%;
+
+  @media screen and (min-width: $mq-medium) {
+    width: 70%;
+  }
+}
+
+.home-hero-cta {
+  margin-top: $base-spacing*4;
+
+  @media screen and (min-width: $mq-medium) {
+    width: 30%;
+    margin: auto;
+    margin-top: $base-spacing*5;
+  }
+}

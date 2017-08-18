@@ -1,0 +1,11 @@
+.card-shadow {
+  padding: $base-spacing*2;
+
+  background: #FFFFFF;
+  box-shadow: 0 2px 20px 0 rgba($neutral-1-d,0.15);
+  border-radius: $base-spacing*2;
+
+  @media screen and (min-width: $mq-medium) {
+    padding: $base-spacing*3;
+  }
+}

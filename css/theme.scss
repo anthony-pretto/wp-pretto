@@ -1,0 +1,51 @@
+@import 'scss/vars';
+@import 'scss/vars_colors';
+@import 'scss/font';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+
+  @extend %current-text;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #FFF;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+//imports
+@import 'scss/template/template';
+@import 'scss/app_window';
+@import 'scss/button';
+@import 'scss/card';
+@import 'scss/icon';
+@import 'scss/slider';
+@import 'scss/text';
+
+@import 'scss/home/home';

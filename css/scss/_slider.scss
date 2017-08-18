@@ -1,0 +1,79 @@
+.slider {
+  + .slider {
+    margin-top: $base-spacing*4;
+  }
+}
+
+.slider-title {
+  display: flex;
+  margin-bottom: $base-spacing;
+  font-weight: 600;
+}
+
+.slider-title-name {
+  flex: 0 0 50%;
+}
+
+.slider-title-value {
+  flex: 0 0 50%;
+  text-align: right;
+}
+
+.slider-bar {
+  height: $base-spacing;
+  border-radius: $base-spacing;
+
+  background-color: rgba($neutral-1, 0.2);
+}
+
+.slider-bar-fill {
+  display: block;
+  position: relative;
+
+  width: 50%;
+  height: $base-spacing;
+  border-radius: $base-spacing;
+
+  background-color: $neutral-1;
+}
+
+.slider-bar-button {
+  position: absolute;
+  display: block;
+
+  width: $base-spacing*3;
+  height: $base-spacing*3;
+  right: -8px;
+  top: -8px;
+
+  border-radius: $base-spacing*3;
+  border: 2px solid $neutral-1;
+  background-color: #FFF;
+}
+
+//theme
+@mixin slider-theme($color: $primary-1)
+{
+  .slider-bar-fill {
+    background-color: $color;
+  }
+  .slider-bar-button {
+    border-color: $color;
+  }
+}
+
+.slider.primary-1 {
+  @include slider-theme($primary-1);
+}
+
+.slider.accent-1 {
+  @include slider-theme($accent-1);
+
+  .slider-title-value {
+    color: $accent-1;
+  }
+}
+
+.slider.accent-5 {
+  @include slider-theme($accent-5);
+}

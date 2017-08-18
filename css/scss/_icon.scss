@@ -1,0 +1,28 @@
+.icon-wp-quote:before {
+  content: "\61";
+}
+.icon-wp-search:before {
+  content: "\62";
+}
+.icon-wp-star:before {
+  content: "\63";
+}
+.icon-wp-p-logo:before {
+  content: "\64";
+}
+
+.icon-trustpilot-star {
+  display: inline-block;
+  width: $base-spacing*4;
+  height: $base-spacing*4;
+  margin-right: 4px;
+
+  background-color: $primary-1;
+  background-image: linear-gradient(135deg, $primary-1 35%, #45E59C 140%);
+  border-radius: 4px;
+  text-shadow: 0 2px 4px 0 rgba($primary-1-d,0.10);
+
+  color: #FFF;
+  text-align: center;
+  line-height: $base-spacing*4
+}

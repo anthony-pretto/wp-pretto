@@ -1,0 +1,53 @@
+%button {
+  display: block;
+  width:100%;
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #FFF;
+
+  transition: all 0.4s ease-out;
+}
+
+.button-small {
+  @extend %button;
+}
+
+.button-medium {
+  @extend %button;
+}
+
+.button-large {
+  @extend %button;
+
+  height: 56px;
+  line-height: 56px;
+  background-color: $primary-1;
+  box-shadow: 0 4px 15px 0 rgba($primary-1-d,0.40);
+}
+
+//theme
+@mixin button-theme($color: $primary-1, $color-d: $primary-1-d) {
+
+  background-color: $color;
+  box-shadow: 0 4px 15px 0 rgba($color-d,0.40);
+
+  &:hover {
+    background-color: $color-d;
+    box-shadow: 0 8px 40px 0 rgba($color-d,0.50);
+    transform: scale(1.05);
+  }
+}
+
+.button-primary {
+  @include button-theme($primary-1, $primary-1-d);
+}
+
+.button-accent-1 {
+  @include button-theme($accent-1, $accent-1-d);
+}

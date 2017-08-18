@@ -1,0 +1,86 @@
+%heading {
+  font-family: $font-primary;
+  font-weight: bold;
+
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+}
+
+.heading-small {
+  @extend %heading;
+}
+
+.heading-medium {
+  @extend %heading;
+
+  @media screen and (min-width: $mq-small) {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+  }
+}
+
+.heading-large {
+  @extend %heading;
+
+  font-size: 32px;
+  line-height: 40px;
+
+  @media screen and (min-width: $mq-small) {
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+  }
+}
+
+//subheading
+%sub-heading {
+  font-family: $font-primary;
+  font-weight: bold;
+
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.sub-heading-small {
+  @extend %sub-heading;
+}
+
+.sub-heading-medium {
+  @extend %sub-heading;
+}
+
+.sub-heading-large {
+  @extend %sub-heading;
+
+  @media screen and (min-width: $mq-small) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+//current
+%current-text {
+  font-family: $font-current;
+  color: $neutral-1;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+//color and position
+.text-primary {
+  color: $primary-1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+

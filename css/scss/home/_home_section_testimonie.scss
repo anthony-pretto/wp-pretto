@@ -1,0 +1,57 @@
+.home-testimonie {
+  display: block;
+  @extend %template-section-padding;
+}
+
+.home-testimonie-heading {
+  margin-bottom: $base-spacing*3;
+
+  @media screen and (min-width: $mq-medium) {
+    margin-bottom: $base-spacing*4;
+  }
+}
+
+.home-testimonie-container {
+  @media screen and (min-width: $mq-medium) {
+    padding: 0 calc(8% + 16px);
+  }
+}
+
+.home-testimonie-container-card {
+  width: 100%;
+  padding: 0 $base-spacing*2;
+
+  @media screen and (min-width: $mq-medium) {
+    width: 50%;
+    padding: 0 $base-spacing*1.5;
+  }
+}
+
+//card
+.home-testimonie-card {
+  display: flex;
+}
+
+.home-testimonie-card-quote {
+  flex: 0 0 24px;
+
+  font-size: 24px;
+  color: $accent-1;
+}
+
+.home-testimonie-card-content {
+  flex: 1 1 auto;
+  padding-left: $base-spacing*2;
+
+  @media screen and (min-width: $mq-medium) {
+    padding-left: $base-spacing*3;
+  }
+}
+
+.home-testimonie-card-content-note {
+  margin-top: $base-spacing*2;
+}
+
+.home-testimonie-card-content-name {
+  margin-top: $base-spacing*2;
+}

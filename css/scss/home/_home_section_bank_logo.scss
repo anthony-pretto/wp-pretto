@@ -1,0 +1,250 @@
+.home-bank-logo {
+  display: block;
+  @extend %template-section-padding;
+  padding-bottom: 0;
+
+  background-color: $neutral-1-l;
+}
+
+.home-bank-logo-arrow {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: -200px;
+  z-index: 1;
+
+  background-image: url(../img/background-arrow.png);
+  background-size: 1920px 250px;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media screen and (min-width: $mq-medium) {
+    height: 220px;
+    top: -220px;
+  }
+}
+
+.home-bank-logo-heading {
+  margin-bottom: $base-spacing*3;
+
+  @media screen and (min-width: $mq-medium) {
+    margin-bottom: $base-spacing*4;
+  }
+}
+
+//illusrtration with bank logos
+$bank-grid-spacing : 88px;
+
+.home-bank-logo-illustration {
+  position: relative;
+  max-width: 1024px;
+  height: 340px;
+  margin: auto;
+
+  background-image: url(../img/bank-logo-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-bank-logo-illustration-container {
+  position: absolute;
+  width: 100%;
+  bottom: -44px;
+  z-index: 2;
+}
+
+.p-app-container {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  left: calc(50% - 64px);
+  top: calc(50% - 64px);
+}
+
+.p-app-logo {
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-image: linear-gradient(200deg, #35AE77 37%, #45E59C 120%);
+  box-shadow: 0 0 25px 0 rgba($neutral-1,0.20);
+  border-radius: $base-spacing*2;
+
+  color: #FFF;
+  font-size: 48px;
+  text-align: center;
+  line-height: 128px;
+  //text-shadow: 0 2px 10px 0 rgba($primary-1,0.50);
+}
+
+.p-app-power {
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 50px;
+  background-color: rgba(#FFF, 0.3);
+
+  animation: power-bounce 2s linear infinite;
+}
+
+.p-app-power-thunder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  background-color: #FFF;
+
+  background-image: url(../img/icon-thunder.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  box-shadow: 0 0 20px rgba($neutral-1, 0.1);
+}
+
+%bank-logo-grid {
+  position: absolute;
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+}
+
+%bank-logo {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  top: 4px;
+  left: 4px;
+  border-radius: 100px;
+  box-shadow: 0 2px 20px 0 rgba($neutral-1,0.20);
+  transition: all 0.1s linear;
+
+  img {
+    width: 100%;
+  }
+}
+
+.bank-logo-row {
+  position: relative;
+  height: 88px;
+}
+
+.bank-logo-grid-1 {
+  @extend %bank-logo-grid;
+  left: $bank-grid-spacing;
+
+  animation: logo-animate-1 2.8s linear infinite;
+}
+
+.bank-logo-grid-2 {
+  @extend %bank-logo-grid;
+  right: $bank-grid-spacing;
+
+  animation: logo-animate-2 3.2s linear infinite;
+}
+
+.bank-logo-grid-3 {
+  @extend %bank-logo-grid;
+  animation: logo-animate-3 3.6s linear infinite;
+}
+
+.bank-logo-grid-4 {
+  @extend %bank-logo-grid;
+  left: $bank-grid-spacing*2;
+  animation: logo-animate-2 4s linear infinite;
+}
+
+.bank-logo-grid-5 {
+  @extend %bank-logo-grid;
+  right: $bank-grid-spacing*2;
+  animation: logo-animate-3 3.2s linear infinite;
+}
+
+.bank-logo-grid-6 {
+  @extend %bank-logo-grid;
+  right: 0;
+  animation: logo-animate-6 2.8s linear infinite;
+}
+
+.bank-logo-grid-7 {
+  @extend %bank-logo-grid;
+  left: $bank-grid-spacing;
+  animation: logo-animate-1 2.8s linear infinite;
+}
+
+.bank-logo-grid-8 {
+  @extend %bank-logo-grid;
+  left: $bank-grid-spacing*3;
+  animation: logo-animate-5 3.6s linear infinite;
+}
+
+.bank-logo-grid-9 {
+  @extend %bank-logo-grid;
+  right: $bank-grid-spacing*3;
+  animation: logo-animate-3 3.4s linear infinite;
+}
+
+.bank-logo-grid-10 {
+  @extend %bank-logo-grid;
+  right: $bank-grid-spacing;
+  animation: logo-animate-5 3.2s linear infinite;
+}
+
+.bank-logo-small {
+  @extend %bank-logo;
+}
+
+.bank-logo-medium {
+  @extend %bank-logo;
+  width: 88px;
+  height: 88px;
+  top: 0;
+  left: 0;
+}
+
+.bank-logo-large {
+  @extend %bank-logo;
+  width: 104px;
+  height: 104px;
+  top: -8px;
+  left: -8px;
+}
+
+@keyframes logo-animate-1 {
+  from { transform: rotate(0deg) translateX(4px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(4px) rotate(-360deg); }
+}
+
+@keyframes logo-animate-2 {
+  from { transform: rotate(0deg) translateX(-4px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(-4px) rotate(-360deg); }
+}
+
+@keyframes logo-animate-3 {
+  from { transform: rotate(360deg) translateX(-4px) rotate(-360deg); }
+  to   { transform: rotate(0deg) translateX(-4px) rotate(0deg); }
+}
+
+@keyframes logo-animate-4 {
+  from { transform: rotate(0deg) translateX(6px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(6px) rotate(-360deg); }
+}
+
+@keyframes logo-animate-5 {
+  from { transform: rotate(0deg) translateX(-6px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(-6px) rotate(-360deg); }
+}
+
+@keyframes logo-animate-6 {
+  from { transform: rotate(0deg) translateX(-2px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(-2px) rotate(-360deg); }
+}
+
+@keyframes power-bounce {
+  0% { transform: scale(1.0)}
+  50%   { transform: scale(1.2) }
+  100%   { transform: scale(1.0) }
+}

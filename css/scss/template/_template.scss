@@ -1,0 +1,30 @@
+.row-center {
+  position: relative;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row-padding {
+  position: relative;
+
+  padding-left: $base-spacing *2;
+  padding-right: $base-spacing *2;
+
+  @media screen and (min-width: $mq-medium) {
+    padding-left: $base-spacing *5;
+    padding-right: $base-spacing *5;
+  }
+}
+
+%template-section-padding {
+  position: relative;
+  padding: $base-spacing*3 0;
+
+  @media screen and (min-width: $mq-medium) {
+    padding: $base-spacing*10 0
+  }
+}
+
+@import 'template_header';
+@import 'template_cta_footer';

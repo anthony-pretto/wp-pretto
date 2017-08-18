@@ -1,0 +1,406 @@
+.home-arguments {
+  display: block;
+  position: relative;
+  padding-top: $base-spacing*3;
+  padding-bottom: $base-spacing*14;
+
+  background-image: linear-gradient(0deg, #2EAFBF -5%, $primary-1 50%, $primary-1 100%);
+  background-color: $primary-1;
+}
+
+.home-arguments-card {
+  position: relative;
+  overflow: hidden;
+  color: #FFF;
+  text-align: center;
+
+  z-index: 10;
+}
+
+@media screen and (max-width: $mq-tablet) {
+
+  .home-arguments-card-heading {
+    margin-bottom: $base-spacing*2;
+  }
+
+  .home-arguments-card-expert-img {
+    display: block;
+    margin: 0 auto $base-spacing*2 auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+
+    background-color: #FFF;
+    box-shadow: 0 4px 20px 0 rgba($primary-1-d,0.60);
+  }
+
+  .home-arguments-dividers {
+    display: block;
+    margin: $base-spacing*3 auto;
+
+    width: 64px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: rgba(#FFF, 0.4);
+  }
+}
+
+//white shadow card for tablet
+@media screen and (min-width: $mq-tablet) {
+
+  .home-arguments {
+    padding-bottom: $base-spacing;
+  }
+
+  .home-arguments-medium-container {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .home-arguments-card-container {
+  }
+
+  .home-arguments-card-1 {
+    flex: 0 0 35%;
+  }
+
+  .home-arguments-card-2 {
+    flex: 1 1 65%;
+    padding-left: $base-spacing*5;
+    padding-top: $base-spacing*6;
+  }
+
+  .home-arguments-card-3 {
+    flex: 0 0 35%;
+    padding-top: $base-spacing*5;
+    margin-left: 35%;
+  }
+
+  .home-arguments-card {
+    padding: $base-spacing*3;
+
+    text-align: left;
+    color: $neutral-1;
+
+    background-color: #FFF;
+    border-radius: $base-spacing*2;
+
+    box-shadow: 0 0 20px 0 rgba($primary-1-d,0.50);
+  }
+
+  .home-arguments-card-2 .home-arguments-card {
+    padding-left: 160px;
+  }
+
+  .home-arguments-card-heading {
+    margin-bottom: $base-spacing;
+    color: $primary-1;
+  }
+
+  .home-arguments-card-expert-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 100%;
+    border: 1px solid red;
+  }
+
+  .home-arguments-dividers {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $mq-medium) {
+
+  .home-arguments-card-1 {
+    flex: 0 0 35%;
+  }
+
+  .home-arguments-card-2 {
+    flex: 1 1 65%;
+    padding-left: $base-spacing*10;
+    padding-top: $base-spacing*6;
+    padding-right: $base-spacing*7;
+  }
+
+  .home-arguments-card-3 {
+    flex: 0 0 35%;
+    padding-top: $base-spacing*10;
+    margin-left: 35%;
+  }
+}
+
+//decoration
+.home-arguments-decoration {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media screen and (min-width: $mq-tablet) {
+
+  %star-1 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+
+    background-image: url(../img/star-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    transform-origin: center;
+  }
+
+  %star-2 {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+
+    background-image: url(../img/star-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+    transform-origin: center;
+  }
+
+  %wave {
+    display: inline-block;
+    border-radius: 1000px;
+    border: 1px solid #FFF;
+    padding: 20px;
+  }
+
+  .home-arguments-decoration-wave {
+    position: absolute;
+    width: 100%;
+    top: -540px;
+    text-align: center;
+
+    .wave-8 {
+      @extend %wave;
+      position: relative;
+      width: 900px;
+      height: 900px;
+    }
+
+    .wave-7, .wave-6, .wave-5, .wave-4, .wave-3, .wave-2, .wave-1 {
+      @extend %wave;
+      width: 100%;
+      height: 100%;
+    }
+
+    .wave-3 {
+      border: 1px solid rgba(#FFF, 0.35);
+      animation: wave-3 3s linear infinite;
+    }
+
+    .wave-4 {
+      border: 1px solid rgba(#FFF, 0.3);
+      animation: wave-4 3s linear infinite;
+    }
+
+    .wave-5 {
+      border: 1px solid rgba(#FFF, 0.22);
+      animation: wave-5 3s linear infinite;
+    }
+
+    .wave-6 {
+      border: 1px solid rgba(#FFF, 0.16);
+      animation: wave-6 3s linear infinite;
+    }
+
+    .wave-7 {
+      border: 1px solid rgba(#FFF, 0.1);
+      animation: wave-7 3s linear infinite;
+    }
+
+    .wave-8 {
+      border: 1px solid rgba(#FFF, 0.05);
+      animation: wave-8 3s linear infinite;
+    }
+  }
+
+  .home-arguments-decoration-star-1 {
+    @extend %star-1;
+    animation: orbit-star-1 50s linear infinite;
+  }
+
+  .home-arguments-decoration-star-2 {
+    @extend %star-2;
+    animation: orbit-star-2 45s linear infinite;
+  }
+
+  .home-arguments-decoration-star-3 {
+    @extend %star-1;
+    animation: orbit-star-3 60s linear infinite;
+  }
+
+  .home-arguments-decoration-star-4 {
+    @extend %star-1;
+    animation: orbit-star-4 80s linear infinite;
+  }
+
+  .home-arguments-decoration-star-5 {
+    @extend %star-2;
+    animation: orbit-star-5 85s linear infinite;
+  }
+
+  .home-arguments-decoration-circle-1 {
+    position: absolute;
+    width: 1102px;
+    height: 1102px;
+    top: -650px;
+    left: calc(50% - 550px);
+    background-image: url(../img/circle-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1102px;
+  }
+
+  .home-arguments-decoration-circle-2 {
+    position: absolute;
+    width: 1502px;
+    height: 1502px;
+    top: -880px;
+    left: calc(50% - 750px);
+    background-image: url(../img/circle-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1502px;
+  }
+
+  .home-arguments-decoration-circle-3 {
+    position: absolute;
+    width: 1902px;
+    height: 1902px;
+    top: -1120px;
+    left: calc(50% - 950px);
+    background-image: url(../img/circle-3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1902px;
+  }
+
+  @keyframes wave-3 {
+    -5% {
+      border: 1px solid rgba(#FFF, 0.3);
+    }
+
+    10% {
+      border: 1px solid rgba(#FFF, 0.85);
+    }
+
+    30% {
+      border: 1px solid rgba(#FFF, 0.3);
+    }
+  }
+
+  @keyframes wave-4 {
+    5% {
+      border: 1px solid rgba(#FFF, 0.35);
+    }
+
+    20% {
+      border: 1px solid rgba(#FFF, 0.85);
+    }
+
+    40% {
+      border: 1px solid rgba(#FFF, 0.35);
+    }
+  }
+
+  @keyframes wave-5 {
+    15% {
+      border: 1px solid rgba(#FFF, 0.22);
+    }
+
+    30% {
+      border: 1px solid rgba(#FFF, 0.80);
+    }
+
+    50% {
+      border: 1px solid rgba(#FFF, 0.22);
+    }
+  }
+
+  @keyframes wave-6 {
+    25% {
+      border: 1px solid rgba(#FFF, 0.16);
+    }
+
+    40% {
+      border: 1px solid rgba(#FFF, 0.70);
+    }
+
+    60% {
+      border: 1px solid rgba(#FFF, 0.16);
+    }
+  }
+
+  @keyframes wave-7 {
+    35% {
+      border: 1px solid rgba(#FFF, 0.1);
+    }
+
+    50% {
+      border: 1px solid rgba(#FFF, 0.60);
+    }
+
+    70% {
+      border: 1px solid rgba(#FFF, 0.1);
+    }
+  }
+
+  @keyframes wave-8 {
+    45% {
+      border: 1px solid rgba(#FFF, 0.05);
+    }
+
+    60% {
+      border: 1px solid rgba(#FFF, 0.50);
+    }
+
+    80% {
+      border: 1px solid rgba(#FFF, 0.05);
+    }
+  }
+
+  @keyframes orbit-star-1 {
+    from { transform: rotate(0deg) translateY(550px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(550px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-star-2 {
+    from { transform: rotate(0deg) translateX(550px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(550px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-star-3 {
+    from { transform: rotate(0deg) translateX(750px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(750px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-star-4 {
+    from { transform: rotate(0deg) translateX(950px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(950px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-star-5 {
+    from { transform: rotate(0deg) translateY(950px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(950px) rotate(-360deg); }
+  }
+}
+

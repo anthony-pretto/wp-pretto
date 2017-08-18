@@ -1,0 +1,55 @@
+%app-window {
+  background-color: #FFF;
+  border-radius: $base-spacing*2;
+
+  overflow: hidden;
+}
+
+.app-window {
+  @extend %app-window;
+}
+
+.app-window-slider {
+  border-radius: $base-spacing;
+  border: 1px solid rgba($neutral-1,0.20);
+  box-shadow: 1px -5px 22px 0 rgba($neutral-1,0.14);
+}
+
+.app-window-how-it-work {
+  @extend %app-window;
+
+  box-shadow: 0 -6px 24px 0 $accent-1-d;
+  border-radius: $base-spacing*2 $base-spacing*2 0 0;
+}
+
+.app-window-content {
+  padding: $base-spacing*2;
+
+  @media screen and (min-width: $mq-medium) {
+    padding: $base-spacing*3;
+  }
+}
+
+.app-window-header {
+  position: relative;
+  height: $base-spacing*5;
+
+  background-color: $neutral-1-l;
+}
+
+.app-window-header-icon-bar {
+  position: absolute;
+  top: $base-spacing*2;
+  left: $base-spacing*2;
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    width: $base-spacing;
+    height: $base-spacing;
+    margin-right: 8px;
+    border-radius: $base-spacing;
+
+    background-color: rgba($neutral-1, 0.2);
+  }
+}
