@@ -1,0 +1,1 @@
+$(document).ready(function(){function i(){var i=$(window).outerWidth();return e=i<840?1:2}var e=i(),d=376,n=$(".home-testimonie-container").bxSlider({maxSlides:e,slideWidth:376});$(window).resize(function(){var e=i();n.reloadSlider({maxSlides:e,slideWidth:376})})});

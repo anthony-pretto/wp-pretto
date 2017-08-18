@@ -1133,7 +1133,8 @@ body {
     transform: scale(1); } }
 
 .home-testimonie {
-  display: block; }
+  display: block;
+  overflow: hidden; }
   @media screen and (min-width: 720px) {
     .home-testimonie {
       padding-top: 80px; } }
@@ -1150,7 +1151,11 @@ body {
 
 .home-testimonie-container-card {
   width: 100%;
-  padding: 0 16px; }
+  padding: 0 16px;
+  opacity: .3;
+  transition: opacity 1000ms ease-in-out; }
+  .home-testimonie-container-card[aria-hidden="false"] {
+    opacity: 1; }
   @media screen and (min-width: 840px) {
     .home-testimonie-container-card {
       width: 50%;
