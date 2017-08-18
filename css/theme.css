@@ -98,7 +98,10 @@ header {
   background-image: url(../img/logo-pretto-primary.svg);
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 70px 16px; }
+  background-size: 100% auto; }
+  @media screen and (min-width: 720px) {
+    .header-logo {
+      width: 80px; } }
   @media screen and (min-width: 840px) {
     .header-logo {
       width: 131px;
@@ -215,7 +218,9 @@ header {
       animation: bounce-large 1.3s infinite; } }
 
 .cta-footer-button {
-  flex: 0 0 100%; }
+  flex: 0 0 100%;
+  max-width: 350px;
+  margin: auto; }
   @media screen and (min-width: 840px) {
     .cta-footer-button {
       flex: 0 0 30%; } }
@@ -459,6 +464,13 @@ body {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px; }
+  @media screen and (min-width: 720px) {
+    .home-hero {
+      height: 620px;
+      background-image: url(../img/home-hero-tablet.png);
+      background-size: 1750px auto;
+      background-position: center bottom;
+      background-repeat: no-repeat; } }
   @media screen and (min-width: 840px) {
     .home-hero {
       height: 460px;
@@ -467,9 +479,6 @@ body {
       background-size: 1920px auto;
       background-position: center bottom;
       background-repeat: no-repeat; } }
-  @media screen and (min-width: 720px) {
-    .home-hero {
-      height: 500px; } }
 
 .home-hero-heading {
   margin: auto;
@@ -479,6 +488,8 @@ body {
       width: 70%; } }
 
 .home-hero-cta {
+  max-width: 350px;
+  margin: auto;
   margin-top: 32px; }
   @media screen and (min-width: 840px) {
     .home-hero-cta {
@@ -594,7 +605,7 @@ body {
     background-position: center;
     background-size: 24px;
     transform-origin: center; }
-  .home-arguments-decoration-star-2, .home-arguments-decoration-star-5 {
+  .home-arguments-decoration-star-2, .home-arguments-decoration-star-5, .home-arguments-decoration-star-6 {
     position: absolute;
     width: 26px;
     height: 26px;
@@ -618,9 +629,10 @@ body {
     top: -540px;
     text-align: center; }
     .home-arguments-decoration-wave .wave-8 {
-      position: relative;
+      position: absolute;
       width: 900px;
-      height: 900px; }
+      height: 900px;
+      left: calc(50% - 450px); }
     .home-arguments-decoration-wave .wave-7, .home-arguments-decoration-wave .wave-6, .home-arguments-decoration-wave .wave-5, .home-arguments-decoration-wave .wave-4, .home-arguments-decoration-wave .wave-3, .home-arguments-decoration-wave .wave-2, .home-arguments-decoration-wave .wave-1 {
       width: 100%;
       height: 100%; }
@@ -652,6 +664,8 @@ body {
     animation: orbit-star-4 80s linear infinite; }
   .home-arguments-decoration-star-5 {
     animation: orbit-star-5 85s linear infinite; }
+  .home-arguments-decoration-star-6 {
+    animation: orbit-star-6 85s linear infinite; }
   .home-arguments-decoration-circle-1 {
     position: absolute;
     width: 1102px;
@@ -748,7 +762,12 @@ body {
     from {
       transform: rotate(0deg) translateY(950px) rotate(0deg); }
     to {
-      transform: rotate(360deg) translateY(950px) rotate(-360deg); } } }
+      transform: rotate(360deg) translateY(950px) rotate(-360deg); } }
+  @keyframes orbit-star-6 {
+    from {
+      transform: rotate(0deg) translateY(-950px) rotate(0deg); }
+    to {
+      transform: rotate(360deg) translateY(-950px) rotate(-360deg); } } }
 
 .view-slider {
   display: none; }
@@ -842,134 +861,232 @@ body {
 
 .home-bank-logo-illustration {
   position: relative;
-  max-width: 1024px;
-  height: 340px;
-  margin: auto;
-  background-image: url(../img/bank-logo-bg.png);
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.home-bank-logo-illustration-container {
-  position: absolute;
   width: 100%;
-  bottom: -44px;
-  z-index: 2; }
+  max-width: 420px;
+  margin: auto; }
+  @media screen and (max-width: 720px) {
+    .home-bank-logo-illustration {
+      margin-top: 16px; } }
+  @media screen and (min-width: 720px) {
+    .home-bank-logo-illustration {
+      max-width: 1024px;
+      height: 340px;
+      background-image: url(../img/bank-logo-bg.png);
+      background-position: center;
+      background-repeat: no-repeat; } }
 
 .p-app-container {
   position: absolute;
-  width: 128px;
-  height: 128px;
-  left: calc(50% - 64px);
-  top: calc(50% - 64px); }
+  width: 80px;
+  height: 80px;
+  left: calc(50% - 40px);
+  top: 35%; }
+  @media screen and (min-width: 720px) {
+    .p-app-container {
+      width: 128px;
+      height: 128px;
+      left: calc(50% - 64px);
+      top: calc(50% - 64px); } }
 
 .p-app-logo {
   display: block;
-  width: 128px;
-  height: 128px;
+  width: 80px;
+  height: 80px;
   background-image: linear-gradient(200deg, #35AE77 37%, #45E59C 120%);
   box-shadow: 0 0 25px 0 rgba(23, 55, 83, 0.2);
-  border-radius: 16px;
+  border-radius: 8px;
   color: #FFF;
-  font-size: 48px;
-  text-align: center;
-  line-height: 128px; }
+  font-size: 32px;
+  line-height: 80px;
+  text-align: center; }
+  @media screen and (min-width: 720px) {
+    .p-app-logo {
+      width: 128px;
+      height: 128px;
+      border-radius: 16px;
+      font-size: 48px;
+      text-align: center;
+      line-height: 128px; } }
 
 .p-app-power {
   position: absolute;
-  top: -25px;
-  left: calc(50% - 25px);
-  width: 50px;
-  height: 50px;
-  padding: 8px;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.3);
-  animation: power-bounce 2s linear infinite; }
-
-.p-app-power-thunder {
+  top: -17px;
+  left: calc(50% - 17px);
   width: 34px;
   height: 34px;
+  padding: 5px;
+  border-radius: 34px;
+  background-color: rgba(255, 255, 255, 0.3);
+  animation: power-bounce 2s linear infinite; }
+  @media screen and (min-width: 720px) {
+    .p-app-power {
+      top: -25px;
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 50px;
+      padding: 8px; } }
+
+.p-app-power-thunder {
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
   background-color: #FFF;
   background-image: url(../img/icon-thunder.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 16px;
-  box-shadow: 0 0 20px rgba(23, 55, 83, 0.1); }
+  background-size: 10px;
+  box-shadow: 0 0 25px rgba(23, 55, 83, 0.1); }
+  @media screen and (min-width: 720px) {
+    .p-app-power-thunder {
+      background-size: 16px; } }
+
+.home-bank-logo-illustration-container {
+  position: relative;
+  width: 100%;
+  bottom: -20px;
+  z-index: 2; }
+  @media screen and (max-width: 720px) {
+    .home-bank-logo-illustration-container {
+      height: 370px; } }
+  @media screen and (min-width: 720px) {
+    .home-bank-logo-illustration-container {
+      position: absolute;
+      bottom: -44px;
+      height: 264px; } }
 
 .bank-logo-grid-1, .bank-logo-grid-2, .bank-logo-grid-3, .bank-logo-grid-4, .bank-logo-grid-5, .bank-logo-grid-6, .bank-logo-grid-7, .bank-logo-grid-8, .bank-logo-grid-9, .bank-logo-grid-10 {
   position: absolute;
-  flex: 0 0 88px;
-  width: 88px;
-  height: 88px; }
+  width: 60px;
+  height: 60px; }
+  @media screen and (min-width: 720px) {
+    .bank-logo-grid-1, .bank-logo-grid-2, .bank-logo-grid-3, .bank-logo-grid-4, .bank-logo-grid-5, .bank-logo-grid-6, .bank-logo-grid-7, .bank-logo-grid-8, .bank-logo-grid-9, .bank-logo-grid-10 {
+      width: 88px;
+      height: 88px; } }
 
 .bank-logo-small, .bank-logo-medium, .bank-logo-large {
   display: block;
   position: absolute;
   overflow: hidden;
-  width: 80px;
-  height: 80px;
-  top: 4px;
-  left: 4px;
+  width: 60px;
+  height: 60px;
   border-radius: 100px;
-  box-shadow: 0 2px 20px 0 rgba(23, 55, 83, 0.2);
-  transition: all 0.1s linear; }
+  box-shadow: 0 2px 20px 0 rgba(23, 55, 83, 0.2); }
   .bank-logo-small img, .bank-logo-medium img, .bank-logo-large img {
     width: 100%; }
+  @media screen and (min-width: 720px) {
+    .bank-logo-small, .bank-logo-medium, .bank-logo-large {
+      width: 80px;
+      height: 80px;
+      top: 4px;
+      left: 4px; } }
 
-.bank-logo-row {
-  position: relative;
-  height: 88px; }
+@media screen and (min-width: 720px) {
+  .bank-logo-medium {
+    width: 88px;
+    height: 88px;
+    top: 0;
+    left: 0; } }
+
+@media screen and (min-width: 720px) {
+  .bank-logo-large {
+    width: 104px;
+    height: 104px;
+    top: -8px;
+    left: -8px; } }
 
 .bank-logo-grid-1 {
-  left: 88px;
   animation: logo-animate-1 2.8s linear infinite; }
 
 .bank-logo-grid-2 {
-  right: 88px;
   animation: logo-animate-2 3.2s linear infinite; }
 
 .bank-logo-grid-3 {
   animation: logo-animate-3 3.6s linear infinite; }
 
 .bank-logo-grid-4 {
-  left: 176px;
   animation: logo-animate-2 4s linear infinite; }
 
 .bank-logo-grid-5 {
-  right: 176px;
   animation: logo-animate-3 3.2s linear infinite; }
 
 .bank-logo-grid-6 {
-  right: 0;
   animation: logo-animate-6 2.8s linear infinite; }
 
 .bank-logo-grid-7 {
-  left: 88px;
   animation: logo-animate-1 2.8s linear infinite; }
 
 .bank-logo-grid-8 {
-  left: 264px;
   animation: logo-animate-5 3.6s linear infinite; }
 
 .bank-logo-grid-9 {
-  right: 264px;
   animation: logo-animate-3 3.4s linear infinite; }
 
 .bank-logo-grid-10 {
-  right: 88px;
   animation: logo-animate-5 3.2s linear infinite; }
 
-.bank-logo-medium {
-  width: 88px;
-  height: 88px;
-  top: 0;
-  left: 0; }
+@media screen and (max-width: 720px) {
+  .bank-logo-grid-1 {
+    top: 0;
+    left: 54px; }
+  .bank-logo-grid-2 {
+    top: 0;
+    right: 54px; }
+  .bank-logo-grid-3 {
+    top: 54px;
+    left: 0; }
+  .bank-logo-grid-4 {
+    top: 54px;
+    right: 0; }
+  .bank-logo-grid-5 {
+    top: 182px;
+    left: 0; }
+  .bank-logo-grid-6 {
+    top: 182px;
+    right: 0; }
+  .bank-logo-grid-7 {
+    top: 240px;
+    left: 70px; }
+  .bank-logo-grid-8 {
+    top: 240px;
+    right: 70px; }
+  .bank-logo-grid-9 {
+    top: 295px;
+    left: 10px; }
+  .bank-logo-grid-10 {
+    top: 295px;
+    right: 10px; } }
 
-.bank-logo-large {
-  width: 104px;
-  height: 104px;
-  top: -8px;
-  left: -8px; }
+@media screen and (min-width: 720px) {
+  .bank-logo-grid-1 {
+    top: 0;
+    left: 88px; }
+  .bank-logo-grid-2 {
+    top: 0;
+    right: 88px; }
+  .bank-logo-grid-3 {
+    top: 88px;
+    left: 0; }
+  .bank-logo-grid-4 {
+    top: 88px;
+    left: 176px; }
+  .bank-logo-grid-5 {
+    top: 88px;
+    right: 176px; }
+  .bank-logo-grid-6 {
+    top: 88px;
+    right: 0; }
+  .bank-logo-grid-7 {
+    top: 176px;
+    left: 88px; }
+  .bank-logo-grid-8 {
+    top: 176px;
+    left: 264px; }
+  .bank-logo-grid-9 {
+    top: 176px;
+    right: 264px; }
+  .bank-logo-grid-10 {
+    top: 176px;
+    right: 88px; } }
 
 @keyframes logo-animate-1 {
   from {
@@ -1017,6 +1134,9 @@ body {
 
 .home-testimonie {
   display: block; }
+  @media screen and (min-width: 720px) {
+    .home-testimonie {
+      padding-top: 80px; } }
 
 .home-testimonie-heading {
   margin-bottom: 24px; }

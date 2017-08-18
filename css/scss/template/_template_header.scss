@@ -17,12 +17,15 @@ header {
   background-image: url(../img/logo-pretto-primary.svg);
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 70px 16px;
+  background-size: 100% auto;
+
+  @media screen and (min-width: $mq-tablet) {
+    width: 80px;
+  }
 
   @media screen and (min-width: $mq-medium) {
     width: 131px;
     height: $base-spacing*5;
-
     background-size: 131px 30px;
   }
 }

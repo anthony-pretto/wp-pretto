@@ -1,6 +1,10 @@
 .home-testimonie {
   display: block;
   @extend %template-section-padding;
+
+  @media screen and (min-width: $mq-tablet) {
+    padding-top: $base-spacing*10;
+  }
 }
 
 .home-testimonie-heading {

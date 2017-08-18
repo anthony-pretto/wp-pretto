@@ -4,6 +4,15 @@
   padding-top: $base-spacing*4;
   padding-bottom: $base-spacing*4;
 
+  @media screen and (min-width: $mq-tablet) {
+    height: 620px;
+
+    background-image: url(../img/home-hero-tablet.png);
+    background-size: 1750px auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
   @media screen and (min-width: $mq-medium) {
     height: 460px;
     padding-top: $base-spacing*5;
@@ -12,10 +21,6 @@
     background-size: 1920px auto;
     background-position: center bottom;
     background-repeat: no-repeat;
-  }
-
-  @media screen and (min-width: $mq-tablet) {
-    height: 500px;
   }
 }
 
@@ -29,6 +34,8 @@
 }
 
 .home-hero-cta {
+  max-width: 350px;
+  margin: auto;
   margin-top: $base-spacing*4;
 
   @media screen and (min-width: $mq-medium) {

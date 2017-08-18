@@ -191,9 +191,10 @@
 
     .wave-8 {
       @extend %wave;
-      position: relative;
+      position: absolute;
       width: 900px;
       height: 900px;
+      left: calc(50% - 450px);
     }
 
     .wave-7, .wave-6, .wave-5, .wave-4, .wave-3, .wave-2, .wave-1 {
@@ -258,6 +259,11 @@
     animation: orbit-star-5 85s linear infinite;
   }
 
+  .home-arguments-decoration-star-6 {
+    @extend %star-2;
+    animation: orbit-star-6 85s linear infinite;
+  }
+
   .home-arguments-decoration-circle-1 {
     position: absolute;
     width: 1102px;
@@ -295,87 +301,39 @@
   }
 
   @keyframes wave-3 {
-    -5% {
-      border: 1px solid rgba(#FFF, 0.3);
-    }
-
-    10% {
-      border: 1px solid rgba(#FFF, 0.85);
-    }
-
-    30% {
-      border: 1px solid rgba(#FFF, 0.3);
-    }
+    -5% { border: 1px solid rgba(#FFF, 0.3); }
+    10% { border: 1px solid rgba(#FFF, 0.85); }
+    30% { border: 1px solid rgba(#FFF, 0.3); }
   }
 
   @keyframes wave-4 {
-    5% {
-      border: 1px solid rgba(#FFF, 0.35);
-    }
-
-    20% {
-      border: 1px solid rgba(#FFF, 0.85);
-    }
-
-    40% {
-      border: 1px solid rgba(#FFF, 0.35);
-    }
+    5%  { border: 1px solid rgba(#FFF, 0.35); }
+    20% { border: 1px solid rgba(#FFF, 0.85); }
+    40% { border: 1px solid rgba(#FFF, 0.35); }
   }
 
   @keyframes wave-5 {
-    15% {
-      border: 1px solid rgba(#FFF, 0.22);
-    }
-
-    30% {
-      border: 1px solid rgba(#FFF, 0.80);
-    }
-
-    50% {
-      border: 1px solid rgba(#FFF, 0.22);
-    }
+    15% { border: 1px solid rgba(#FFF, 0.22); }
+    30% { border: 1px solid rgba(#FFF, 0.80); }
+    50% { border: 1px solid rgba(#FFF, 0.22); }
   }
 
   @keyframes wave-6 {
-    25% {
-      border: 1px solid rgba(#FFF, 0.16);
-    }
-
-    40% {
-      border: 1px solid rgba(#FFF, 0.70);
-    }
-
-    60% {
-      border: 1px solid rgba(#FFF, 0.16);
-    }
+    25% { border: 1px solid rgba(#FFF, 0.16); }
+    40% { border: 1px solid rgba(#FFF, 0.70); }
+    60% { border: 1px solid rgba(#FFF, 0.16); }
   }
 
   @keyframes wave-7 {
-    35% {
-      border: 1px solid rgba(#FFF, 0.1);
-    }
-
-    50% {
-      border: 1px solid rgba(#FFF, 0.60);
-    }
-
-    70% {
-      border: 1px solid rgba(#FFF, 0.1);
-    }
+    35% { border: 1px solid rgba(#FFF, 0.1); }
+    50% { border: 1px solid rgba(#FFF, 0.60); }
+    70% { border: 1px solid rgba(#FFF, 0.1); }
   }
 
   @keyframes wave-8 {
-    45% {
-      border: 1px solid rgba(#FFF, 0.05);
-    }
-
-    60% {
-      border: 1px solid rgba(#FFF, 0.50);
-    }
-
-    80% {
-      border: 1px solid rgba(#FFF, 0.05);
-    }
+    45% { border: 1px solid rgba(#FFF, 0.05); }
+    60% { border: 1px solid rgba(#FFF, 0.50); }
+    80% { border: 1px solid rgba(#FFF, 0.05); }
   }
 
   @keyframes orbit-star-1 {
@@ -401,6 +359,11 @@
   @keyframes orbit-star-5 {
     from { transform: rotate(0deg) translateY(950px) rotate(0deg); }
     to   { transform: rotate(360deg) translateY(950px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-star-6 {
+    from { transform: rotate(0deg) translateY(-950px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(-950px) rotate(-360deg); }
   }
 }
 
