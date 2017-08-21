@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$(".secondary-header"),o="header-visible",t=$(".home-hero-cta .button-large");$(document).scroll(function(){$(document).scrollTop()>t.offset().top+t.outerHeight()?e.addClass(o):e.removeClass(o)})});
