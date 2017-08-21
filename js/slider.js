@@ -15,14 +15,22 @@ $(document).ready(function(){
   var slider = $('.home-testimonie-container').bxSlider({
     maxSlides: maxSlides,
     slideWidth: sliderWidth,
-    slideMargin: slideMargin
+    slideMargin: slideMargin,
+    moveSlides: 1,
+    infiniteLoop: false,
+    controls: false,
+    auto: true
   });
   $(window).resize(function(){
     var maxSlides = calcParams();
     slider.reloadSlider({
       maxSlides: maxSlides,
       slideWidth: sliderWidth,
-      slideMargin: slideMargin
+      slideMargin: slideMargin,
+      moveSlides: 1,
+      infiniteLoop: false,
+      controls: false,
+      auto: true
     });
   });
 });

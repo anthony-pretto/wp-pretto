@@ -40,15 +40,15 @@ ul.bxslider {
 /* PAGER */
 .bx-wrapper .bx-pager {
   position: relative;
-  padding-top: $base-spacing*3;
+  padding-top: $base-spacing*2;
   text-align: center;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
   display: block;
-  width: $base-spacing*2;
-  height: $base-spacing*2;
-  margin: 0 $base-spacing;
+  width: $base-spacing;
+  height: $base-spacing;
+  margin: 0 4px;
   outline: 0;
 
   background: rgba($neutral-1, 0.2);
