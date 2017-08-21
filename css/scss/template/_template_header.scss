@@ -8,19 +8,69 @@
     padding-bottom: $base-spacing*3;
   }
 }
+
 .secondary-header {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: red;
-  z-index: 9999;
+
+  @media screen and (min-width: $mq-medium) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: $base-spacing*11;
+    padding-top: $base-spacing*3;
+    padding-bottom: $base-spacing*3;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    box-shadow: 0 0px 20px 0 rgba($neutral-1,0.25);
+
+    transition: all 0.5s ease-out;
+    transform: translateY(-200px);
+    z-index: 9999;
+  }
 }
+
+.header-button {
+  position: absolute;
+  width: 60%;
+  height: 48px;
+  right: $base-spacing*5;
+  top: -4px;
+  text-align: right;
+}
+
+.header-phone, .header-button-cta {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header-phone {
+  margin-right: $base-spacing*3;
+  font-weight: 600;
+}
+
+.header-phone-icon, .header-phone-text {
+  display: inline-block;
+  vertical-align: top;
+  height: $base-spacing*6;
+  line-height: $base-spacing*6;
+}
+
+.header-phone-icon {
+  width: $base-spacing*2;
+  margin-right: $base-spacing*2;
+  color: rgba($neutral-1, 0.3);
+}
+
+.header-button-cta .button-primary {
+  box-shadow: none;
+}
+
 .header-visible {
   display: block;
+  transform: translateY(0px);
 }
+
 .header-logo {
   display: block;
   width: 70px;
