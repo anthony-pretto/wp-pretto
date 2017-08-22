@@ -23,16 +23,15 @@
 }
 
 .home-testimonie-container-card {
-  width: 100%;
-  padding: 0 $base-spacing*2;
   opacity: .3;
   transition: opacity 1000ms ease-in-out;
+
   &[aria-hidden="false"] {
     opacity: 1;
   }
-  @media screen and (min-width: $mq-medium) {
-    width: 50%;
-    padding: 0 $base-spacing*1.5;
+
+  @media screen and (max-width: $mq-xsmall) {
+    padding: 0 $base-spacing*2;
   }
 }
 

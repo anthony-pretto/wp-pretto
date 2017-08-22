@@ -80,6 +80,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/scss\/_jquery.bxslider.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/scss\/_jquery.bxslider.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/scss\/_slider.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -676,6 +689,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/jquery.bxslider.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/jquery.bxslider.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/slider-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -696,43 +719,24 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/lib\/jquery.bxslider-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/lib\/jquery.bxslider-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/lib\/jquery.bxslider.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/lib\/jquery.bxslider-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/lib\/jquery.bxslider.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/jquery.bxslider.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/slim\/home.slim": {
 		"cmO": 0,
 		"ft": 1024,
 		"llg": 0,
 		"oA": 0,
-		"oAP": "\/home.html",
-		"oF": 2,
+		"oAP": "\/slim\/home.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"rAC": 0
+		},
+	"\/slim\/home\/_testimonies.slim": {
+		"cmO": 0,
+		"ft": 1024,
+		"llg": 0,
+		"oA": 1,
+		"oAP": "\/slim\/home\/_testimonies.html",
+		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
 		"rAC": 0

@@ -10,6 +10,10 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  @media screen and (min-width: $mq-medium) {
+    flex-wrap: nowrap;
+  }
 }
 
 .cta-footer-title {

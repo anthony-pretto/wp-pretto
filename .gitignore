@@ -1,2 +1,6 @@
 .DS_Store
+<<<<<<< HEAD
 *.codekit3
+=======
+config.codekit3
+>>>>>>> a9ede73d45097b6aa4543e6353247fea1f8671fc
